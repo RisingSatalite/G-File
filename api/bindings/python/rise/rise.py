@@ -195,6 +195,7 @@ def register_rise_client() -> None:
         ret = nvapi.register_rise_callback(ctypes.byref(callback_settings))
         if ret != 0:
             print('Registration Failed')
+            print(ret)
             return
 
         while not ready:
